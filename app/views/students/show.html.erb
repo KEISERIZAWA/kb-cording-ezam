@@ -1,0 +1,12 @@
+<h1>詳細情報</h1>
+<div class="student">
+    <p>受講生:<%= @student.name %></p>
+    <p>大学学部:<%= @student.profile %></p>
+    <p>回生:<%= @student.grade %></p>
+    <p>メンター:<%= @student.mentor %></p>
+    <p>投稿者:<%= @student.user.email %></p>
+    <p>投稿日時:<%= @student.created_at %></p>
+</div>
+ <%= button_to "削除", student_path(@student.id), method: :delete %>
+<%= link_to "編集", edit_student_path(@student.id) %>
+<%= link_to "投稿一覧", students_path %>

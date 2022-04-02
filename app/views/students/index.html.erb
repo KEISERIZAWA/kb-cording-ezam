@@ -1,0 +1,29 @@
+<h1>投稿一覧</h1>
+
+<h3>投稿を検索</h3>
+ <%= form_tag({controller:"students",action:"index"}, method: :get) do %>
+   <%= text_field_tag :search %>
+   <%= submit_tag '検索する'  %>
+<% end %>
+
+      <p><% if user_signed_in? %>
+            <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+         <% else %>
+            <%= button_to "新規登録", new_user_session_path %>
+         <% end %>
+      </p>
+
+<%= link_to "新規投稿", new_student_path %>
+<div class="students-container">
+    <% @students.each do |t| %>
+    <div class="student">
+    <p><%= t.name %></p>
+    <p><%= t.profile %></p>
+    <p><%= t.grade %></p>
+    <p><%= t.mentor %></p>
+    <p><%= t.created_at %></p>
+    <%= link_to "詳細", student_path(t.id) %>
+    <%= link_to "編集", edit_student_path(t.id) %>
+    </div>
+    <% end %>
+</div>

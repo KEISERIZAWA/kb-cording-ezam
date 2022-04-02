@@ -1,0 +1,13 @@
+<h1>編集</h1>
+
+<%= form_for @student do |f| %>
+    <%= f.label :受講生 %>
+    <%= f.text_field :name, :size => 50 %> </p>
+    <%= f.label :大学学部 %>
+    <%= f.text_field :profile, :size => 50 %> </p>
+    <%= f.label :回生 %>
+    <%= f.text_field :grade, :size => 10 %> </p>
+    <%= f.label :メンター %>
+    <%= f.text_field :mentor, :size => 50 %> </p>
+    <%= f.submit "編集する" %>
+<% end %>

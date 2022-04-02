@@ -1,0 +1,17 @@
+<h1>Students#new</h1>
+<%= form_for @student do |f| %>
+    <div class="field">
+
+    <%= f.label :受講生 %>
+    <p><%= f.text_field :name, :size => 50 %></p>
+    <%= f.label :大学学部 %>
+    <p><%= f.text_field :profile, :size => 50 %></p>
+    <%= f.label :回生 %>
+    <p><%= f.text_field :grade, :size => 10 %></p>
+    <%= f.label :メンター %>
+    <p><%= f.text_field :mentor, :size => 50 %></p>
+
+    </div>
+    <%= f.submit "投稿"%>
+<% end %>
+<%= link_to "投稿一覧", students_path %>

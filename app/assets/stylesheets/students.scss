@@ -1,0 +1,18 @@
+// Place all the styles related to the students controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 60px;
+ 
+}
+header p {
+    font-size: 40px;
+    margin-left: 3%;
+    margin-right: 3%;
+    align-items: center;
+}
